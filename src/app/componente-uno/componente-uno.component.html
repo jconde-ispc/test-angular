@@ -2,12 +2,25 @@
 
 <h3>Este es componente uno</h3>
 
+<h2>NGModel</h2>
+<p>Nombre: {{person.name}}</p>
+<input type="text" [(ngModel)]="person.name">
+
+<progress max="100" [value]="edad"></progress>
+<hr>
+<progress max="100" [value]="edad"></progress>
+
 <button (click)="aumentarEdad()" >Aumentar</button>
 <button (click)="disminuirEdad()" >Disminuir</button>
+
+<img src="{{person.avatar}}" alt="">
+
+<img [src]="avatar" alt="">
 
 <h3 [style.background]="edad >=18  ? 'green' : 'red'"
     [style.color]="'white'">
   Tu edad es {{edad}}
+
 
 </h3>
 

@@ -9,6 +9,15 @@ export class ComponenteUnoComponent implements OnInit {
 
   edad:number;
   nombres:Array<string>;
+  avatar1:string = "https://www.w3schools.com/w3css/img_avatar3.png";
+
+  avatar:string = "img/community.svg";
+
+  person = {
+    age : 19,
+    name: "Antonia",
+    avatar:"https://www.w3schools.com/w3css/img_avatar.png"
+  }
 
 
   constructor () {
