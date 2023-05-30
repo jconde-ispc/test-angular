@@ -3,6 +3,36 @@
 <h3>Este es componente uno</h3>
 
 <h2>NGModel</h2>
+<!--
+
+  El atributo ngModel permite el intercambio de datos de forma bidireccional entre el componente y
+   la vista. Lo que suceda en el componente, se verá reflejado en la vista. Lo que se suceda en la vista,
+    inmediatamente impactará en el componente.
+
+
+    ngModel usar tanto los corchetes [] como los paréntesis (). De esta manera, se vuelve bidireccional
+     el intercambio de datos. Si no quieres la bidirección, solo colocamos los corchetes [ngModel] para
+      que la comunicación sea unidireccional.Para utilizar ngModel, es necesario hacer uso e importar
+      Angular Forms. Para esto, dirígete al archivo app.module.ts que es el módulo principal de toda
+      aplicación Angular y agrega:
+
+      ...
+import { FormsModule } from '@angular/forms';
+
+@NgModule({
+  declarations: [ ... ],
+  imports: [
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [ ... ]
+})
+export class AppModule { }
+...
+
+De esta manera puedes importar el módulo FormsModule desde @angular/forms y agregarlo
+ a imports para emplear la propiedad [(ngModel)].
+-->
 <p>Nombre: {{person.name}}</p>
 <input type="text" [(ngModel)]="person.name">
 
@@ -14,6 +44,20 @@
 <button (click)="disminuirEdad()" >Disminuir</button>
 
 <img src="{{person.avatar}}" alt="">
+
+<!--
+
+  Property Binding es la manera que dispone Angular para controlar y modificar las propiedades
+   de los distintos elementos de HTML. Para esto, simplemente utiliza los corchetes [] para poder
+    modificar dinámicamente ese atributo desde el controlador.
+
+Utilidades
+El atributo src de la etiqueta <img> para modificar dinámicamente una imagen.
+El atributo href de un <a> para modificar un enlace.
+El atributo value de un <input> para autocompletar un valor de un formulario.
+El atributo disable de un <input> para habilitar/deshabilitar un campo de un formulario.
+
+ -->
 
 <img [src]="avatar" alt="">
 

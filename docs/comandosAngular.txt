@@ -1,3 +1,20 @@
 ng generate component //GENERA UN NUEVO COMPONENTE
 
 ng serve //CORRE EL PROYECTO
+
+Crear proyecto: ng new my-project
+Lanzar servidor de desarrollo: ng serve
+Lanzar servidor de desarrollo y que abra el navegador automáticamente:ng serve -o
+Lanzar el servidor en un puerto especifico: ng serve -o --port=3500
+
+Si lanzamos el comando ng version desde la carpeta del proyecto podremos obtener mayor detalle de las tecnolog[ias utilizadas.
+
+julian@julianPC:~/desarrollo/proyectosISPC/angular/proyecto-pil-money-angular$ export NODE_OPTIONS=--openssl-legacy-provider
+julian@julianPC:~/desarrollo/proyectosISPC/angular/proyecto-pil-money-angular$ ng serve -o
+
+para resolver el problema:
+
+opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+  library: 'digital envelope routines',
+  reason: 'unsupported',
+  code: 'ERR_OSSL_EVP_UNSUPPORTED'
